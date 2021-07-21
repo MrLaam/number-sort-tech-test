@@ -1,0 +1,74 @@
+﻿@model NumberSetViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container w-75 p-3 mx-auto border border-light bg-light mt-5">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <form class="d-block w-75 mx-auto pb-3 mt-1" method="post" asp-controller="Home" asp-action="Index">
+        @if ((string)TempData["Success"] == "Success")
+        {
+        <div class="container mb-3">
+            <span class="text-success font-weight-bold">Successfully sorted and added into database</span>
+        </div>
+        }
+        <div class="container">
+            <span asp-validation-for="@Model.NumberSortForm.unsortedList" class="text-danger"></span>
+            <label asp-for="@Model.NumberSortForm.unsortedList">Enter a set of numbers separated by <span class="font-weight-bold">spaces</span> or <span class="font-weight-bold">commas</span>:</label>
+            <textarea asp-for="@Model.NumberSortForm.unsortedList" class="w-100"></textarea>
+        </div>
+
+        <div class="container mt-4 mb-4">
+            <label>Select the sort order:</label>
+            <br />
+            <input type="radio" asp-for="@Model.NumberSortForm.sortOrder" value="Ascending" checked="checked" />
+            <label asp-for="@Model.NumberSortForm.sortOrder">Ascending</label>
+            <input type="radio" asp-for="@Model.NumberSortForm.sortOrder" value="Descending" class="ml-2" />
+            <label asp-for="@Model.NumberSortForm.sortOrder">Descending</label>
+        </div>
+
+        <div class="container mt-4 mb-4">
+            <input type="submit" value="Sort List" class="btn btn-info w-100" />
+        </div>
+
+    </form>
+
+    <div class="d-block w-75 mx-auto pb-3 mt-1">
+        <a class="btn btn-link" asp-area="" asp-controller="Home" asp-action="Index" asp-route-isDownload="true">Export As Json</a>
+    </div>
+
+    @if (Model.NumberSets.Count() > 0)
+    {
+        <div class="table-responsive mt-5">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Sorted List</th>
+                        <th>Sort Order</th>
+                        <th>Sort Time (ms)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var sortedList in Model.NumberSets)
+                    {
+                        <tr>
+                            <td>@sortedList.Id</td>
+                            <td>@sortedList.SortedList</td>
+                            <td>@sortedList.SortOrder</td>
+                            <td>@sortedList.SortTime</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+
+</div>
+
+@section Scripts{ 
+
+    @{ <partial name="_ValidationScriptsPartial" /> }
+
+}
