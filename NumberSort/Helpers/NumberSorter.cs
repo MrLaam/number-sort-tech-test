@@ -23,7 +23,7 @@ namespace NumberSort.Views.Helpers
             listUnsortedList.Sort();
             if(sortOrder.Equals("Descending"))
             {
-                unsortedList.Reverse();
+                listUnsortedList.Reverse();
             }
 
             stopWatch.Stop();

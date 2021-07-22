@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using NumberSort.Data;
 using NumberSort.Models;
@@ -21,6 +22,7 @@ namespace NumberSort.Controllers
         public HomeController(ApplicationDbContext db)
         {
             _db = db;
+            _db.Database.Migrate();
         }
 
         [HttpGet]
