@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kB/0DZQNt+DVYT5pHKBayf+1/Lo5G3wLCtuOY8OmAtKo52hJrIebUhUxzJIa07Zwska01BGjYLgQ/YRXCSwgnA==",
+  "dgSpecHash": "JokBmUKevnkGoxMZefe47yUnuvhB79LaKgMJGJc67QfsgtwQFZxDA+qZcmu/jc/9adJG3osaZOUGOqshg3p11A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jorda\\source\\repos\\NumberSort\\NumberSort\\NumberSort.csproj",
+  "projectFilePath": "C:\\Users\\jorda\\source\\repos\\number-sort-tech-test\\NumberSort\\NumberSort.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jorda\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jorda\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

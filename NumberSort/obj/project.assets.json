@@ -5801,11 +5801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jorda\\source\\repos\\NumberSort\\NumberSort\\NumberSort.csproj",
+      "projectUniqueName": "C:\\Users\\jorda\\source\\repos\\number-sort-tech-test\\NumberSort\\NumberSort.csproj",
       "projectName": "NumberSort",
-      "projectPath": "C:\\Users\\jorda\\source\\repos\\NumberSort\\NumberSort\\NumberSort.csproj",
+      "projectPath": "C:\\Users\\jorda\\source\\repos\\number-sort-tech-test\\NumberSort\\NumberSort.csproj",
       "packagesPath": "C:\\Users\\jorda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jorda\\source\\repos\\NumberSort\\NumberSort\\obj\\",
+      "outputPath": "C:\\Users\\jorda\\source\\repos\\number-sort-tech-test\\NumberSort\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jorda\\AppData\\Roaming\\NuGet\\NuGet.Config",
